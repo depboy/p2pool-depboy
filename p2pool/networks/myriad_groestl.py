@@ -13,5 +13,5 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 3333
-BOOTSTRAP_ADDRS = 'birdspool.no-ip.org aforis.mooo.com us.myriadminers.com eu.myriadminers.com'.split(' ')
+BOOTSTRAP_ADDRS = 'birdspool.no-ip.org nz.p2pool.geek.nz uk.p2pool.geek.nz'.split(' ')
 VERSION_CHECK = lambda v: True

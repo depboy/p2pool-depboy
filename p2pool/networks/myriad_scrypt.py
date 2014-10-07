@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 5556
-BOOTSTRAP_ADDRS = 'birdspool.no-ip.org'.split(' ')
+BOOTSTRAP_ADDRS = 'birdspool.no-ip.org nz.p2pool.geek.nz uk.p2pool.geek.nz'.split(' ')
 ANNOUNCE_CHANNEL='#p2pool-alt'
 VERSION_CHECK = lambda v: True
