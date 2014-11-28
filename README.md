@@ -27,21 +27,21 @@ configurations, using P2Pool should be as simple as:
 
 Replace {network_name} with the following depending on the algorithm:
 
-SHA256d - myriad_sha256d
-Scrypt - myriad_scrypt
-Scrypt - myriad_scrypt_lh (Low hash rate network)
-Skein - myriad_skein
-Myr-Groestl - myriad_groestl
-Qubit - myriad_qubit
+* SHA256d - myriad_sha256d
+* Scrypt - myriad_scrypt
+* Scrypt - myriad_scrypt_lh (Low hash rate network)
+* Skein - myriad_skein
+* Myr-Groestl - myriad_groestl
+* Qubit - myriad_qubit
 	
 To make your node accessible from the internet, open the following ports on your router (both the worker port and peer-2-peer port please!):
 
-SHA256d: Worker Port = 5578; Peer-2-Peer Port = 5577
-Scrypt: Worker Port = 5556; Peer-2-Peer Port = 5555
-Scrypt Low Hash: Worker Port = 5558; Peer-2-Peer Port = 5557
-Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
-Myr-Groestl: Worker Port = 3333; Peer-2-Peer Port = 8889
-Qubit: Worker Port = 5567; Peer-2-Peer Port = 5566
+* SHA256d: Worker Port = 5578; Peer-2-Peer Port = 5577
+* Scrypt: Worker Port = 5556; Peer-2-Peer Port = 5555
+* Scrypt Low Hash: Worker Port = 5558; Peer-2-Peer Port = 5557
+* Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
+* Myr-Groestl: Worker Port = 3333; Peer-2-Peer Port = 8889
+* Qubit: Worker Port = 5567; Peer-2-Peer Port = 5566
 
 
 Run for additional options:
