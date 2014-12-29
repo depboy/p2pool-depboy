@@ -27,12 +27,64 @@ configurations, using P2Pool should be as simple as:
 
 Replace {network_name} with the following depending on the algorithm:
 
+<<<<<<< HEAD
 * SHA256d - myriad_sha256d
 * Scrypt - myriad_scrypt
 * Scrypt - myriad_scrypt_lh (Low hash rate network)
 * Skein - myriad_skein
 * Myr-Groestl - myriad_groestl
 * Qubit - myriad_qubit
+=======
+If you are behind a NAT, you should enable TCP port forwarding on your
+router. Forward port 9333 to the host running P2Pool.
+
+Run for additional options.
+
+    python run_p2pool.py --help
+
+Donations towards further development:
+-------------------------
+    1HNeqi3pJRNvXybNX4FKzZgYJsdTSqJTbk
+
+Official wiki:
+-------------------------
+https://en.bitcoin.it/wiki/P2Pool
+
+Alternate web frontend:
+-------------------------
+* https://github.com/hardcpp/P2PoolExtendedFrontEnd
+
+Notes for Litecoin:
+=========================
+Requirements:
+-------------------------
+In order to run P2Pool with the Litecoin network, you would need to build and install the
+ltc_scrypt module that includes the scrypt proof of work code that Litecoin uses for hashes.
+
+Linux:
+
+    cd litecoin_scrypt
+    sudo python setup.py install
+
+Windows (mingw):
+* Install MinGW: http://www.mingw.org/wiki/Getting_Started
+* Install Python 2.7: http://www.python.org/getit/
+
+In bash type this:
+
+    cd litecoin_scrypt
+    C:\Python27\python.exe setup.py build --compile=mingw32 install
+
+Windows (microsoft visual c++)
+* Open visual studio console
+
+In bash type this:
+
+    SET VS90COMNTOOLS=%VS110COMNTOOLS%	           # For visual c++ 2012
+    SET VS90COMNTOOLS=%VS100COMNTOOLS%             # For visual c++ 2010
+    cd litecoin_scrypt
+    C:\Python27\python.exe setup.py build --compile=mingw32 install
+>>>>>>> upstream/master
 	
 To make your node accessible from the internet, open the following ports on your router (both the worker port and peer-2-peer port please!):
 
@@ -50,5 +102,18 @@ Run for additional options:
 
 Official wiki :
 -------------------------
+<<<<<<< HEAD
 https://en.bitcoin.it/wiki/P2Pool
+=======
+
+Thanks to:
+* The Bitcoin Foundation for its generous support of P2Pool
+* The Litecoin Project for its generous donations to P2Pool
+ 
+License:
+-------------------------
+
+[Available here](COPYING)
+
+>>>>>>> upstream/master
 
