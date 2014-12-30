@@ -1,5 +1,6 @@
 import os
 import platform
+import math
 
 from twisted.internet import defer
 
@@ -16,13 +17,13 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
 SUBSIDY_FUNC = lambda height: 100000000 * 100 * math.pow(0.99, (height - 1999)//10080)
-POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('blake_getpowhash').getPoWHash(data))
+POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('blake_hash').getPoWHash(data))
 BLOCK_PERIOD = 300 # s
 SYMBOL = 'UIS'
 CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'unitus') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/unitus/') if platform.system() == 'Darwin' else os.path.expanduser('~/.unitus'), 'unitus.conf')
-BLOCK_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info:1200/block/'
-ADDRESS_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info:1200/address/'
-TX_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info:1200/tx/'
+BLOCK_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info/block/'
+ADDRESS_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info/address/'
+TX_EXPLORER_URL_PREFIX = 'http://explorer.unitus.info/tx/'
 SANE_TARGET_RANGE=(2**256//2**32//1000 - 1, 2**256//2**20 - 1)
 DUMB_SCRYPT_DIFF = 1
 DUST_THRESHOLD = 0.001e8
