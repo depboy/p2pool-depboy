@@ -13,5 +13,5 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 51050
-BOOTSTRAP_ADDRS = 'nz.p2pool.geek.nz'.split(' ')
+BOOTSTRAP_ADDRS = 'nz.p2pool.geek.nz us.p2pool.geek.nz'.split(' ')
 VERSION_CHECK = lambda v: True
