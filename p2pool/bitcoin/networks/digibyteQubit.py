@@ -16,7 +16,7 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
 SUBSIDY_FUNC = lambda height: __import__('digibyte_subsidy').GetBlockBaseValue(height)
-POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('qubitcoin-hash').getPoWHash(data))
+POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('qubit_hash').getPoWHash(data))
 BLOCK_PERIOD = 150 # s
 SYMBOL = 'DGB'
 CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'digibyte') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/digibyte/') if platform.system() == 'Darwin' else os.path.expanduser('~/.digibyte'), 'digibyte.conf')
