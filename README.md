@@ -43,6 +43,7 @@ Replace {network_name} with the following depending on the algorithm:
 * DGB-Skein - digibyteSkein
 * DGB-Groestl - digibyteGroestl
 * DGB-Qubit - digibyteQubit
+* DGC-X11 - digitalcoinX11
 
 To make your node accessible from the internet, open the following ports on your router (both the worker port and peer-2-peer port please!):
 
@@ -55,6 +56,7 @@ To make your node accessible from the internet, open the following ports on your
 * DGB-Skein: Worker Port = 5031; Peer-2-Peer Port = 5030
 * DGB-Groestl: Worker Port = 5021; Peer-2-Peer Port = 5020
 * DGB-Qubit: Worker Port = 5041; Peer-2-Peer Port = 5040
+* DGC-X11: Worker Port = 8811; Peer-2-Peer Port = 23611
 
 Run for additional options:
 
