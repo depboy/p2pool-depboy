@@ -18,6 +18,13 @@ Windows:
 * Install python win32 api wmi wrapper: https://pypi.python.org/pypi/WMI/#downloads
 * Unzip the files into C:\Python27\Lib\site-packages
 
+For Digibyte
+-------------------------
+
+In order to run Digibyte nodes you must first install the digibyte_subsidy module:
+
+* sudo python setup.py install # from within the python_subsidy directory
+
 Running P2Pool:
 -------------------------
 To use P2Pool, you must be running your own local myriadcoind. For standard
@@ -27,22 +34,27 @@ configurations, using P2Pool should be as simple as:
 
 Replace {network_name} with the following depending on the algorithm:
 
-* SHA256d - myriad_sha256d
-* Scrypt - myriad_scrypt
-* Scrypt - myriad_scrypt_lh (Low hash rate network)
-* Skein - myriad_skein
-* Myr-Groestl - myriad_groestl
-* Qubit - myriad_qubit
+* MYR-SHA256d - myriad_sha256d
+* MYR-Scrypt - myriad_scrypt
+* MYR-Scrypt - myriad_scrypt_lh (Low hash rate network)
+* MYR-Skein - myriad_skein
+* MYR-Groestl - myriad_groestl
+* MYR-Qubit - myriad_qubit
+* DGB-Skein - digibyteSkein
+* DGB-Groestl - digibyteGroestl
+* DGB-Qubit - digibyteQubit
 
 To make your node accessible from the internet, open the following ports on your router (both the worker port and peer-2-peer port please!):
 
-* SHA256d: Worker Port = 5578; Peer-2-Peer Port = 5577
-* Scrypt: Worker Port = 5556; Peer-2-Peer Port = 5555
-* Scrypt Low Hash: Worker Port = 5558; Peer-2-Peer Port = 5557
-* Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
-* Myr-Groestl: Worker Port = 3333; Peer-2-Peer Port = 8889
-* Qubit: Worker Port = 5567; Peer-2-Peer Port = 5566
-
+* MYR-SHA256d: Worker Port = 5578; Peer-2-Peer Port = 5577
+* MYR-Scrypt: Worker Port = 5556; Peer-2-Peer Port = 5555
+* MYR-Scrypt Low Hash: Worker Port = 5558; Peer-2-Peer Port = 5557
+* MYR-Skein: Worker Port = 5589; Peer-2-Peer Port = 5588
+* MYR-Groestl: Worker Port = 3333; Peer-2-Peer Port = 8889
+* MYR-Qubit: Worker Port = 5567; Peer-2-Peer Port = 5566
+* DGB-Skein: Worker Port = 5031; Peer-2-Peer Port = 5030
+* DGB-Groestl: Worker Port = 5021; Peer-2-Peer Port = 5020
+* DGB-Qubit: Worker Port = 5041; Peer-2-Peer Port = 5040
 
 Run for additional options:
 
